@@ -13,6 +13,7 @@ module.exports= {
     "vue/multi-word-component-names": "off",
     "vue/no-mutating-props": "off",
     "vue/valid-v-slot": ["error", { "allowModifiers": true }],
+    "vue/comment-directive": "off"
   },
   "parserOptions": {
     "parser": "@typescript-eslint/parser"

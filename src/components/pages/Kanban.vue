@@ -63,11 +63,13 @@
       </div>
       <AddCard
         v-model:show="showModal"
-        :column-index="column.id"
+        v-model:click-column="clickColumn"
+        :column-index="columnIndex"
       />
       <CreateNote
         v-model:show="showModal"
-        :column-index="1"
+        :click-column="clickColumn"
+        :column-index="columnIndex"
       />
     </Draggable>
   </Container>
@@ -87,6 +89,8 @@ const indexStore = useIndexStore();
 const showModal = ref<boolean>(false);
 const isEdit = ref<boolean>(false);
 const itemId = ref<String>('');
+// 
+const clickColumn: number = (0);
 
 const edit = (id: String) => {
   isEdit.value = !isEdit.value;

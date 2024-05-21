@@ -215,7 +215,7 @@ export const tasks = [
         description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui",
         src: require("@/assets/svg/card/card_2.svg"),
         alt: "card_2",
-        colorLine: ["#F8BD1C]", "[#FF3838]", "[#891BE8]"]
+        colorLine: ["#F8BD1C", "#FF3838", "#891BE8"]
       },
       {
         type: "draggable",
@@ -224,7 +224,7 @@ export const tasks = [
         description: "On the other hand, we denounce with righteous",
         src: require("@/assets/svg/card/card_1.svg"),
         alt: "card_1",
-        colorLine: ["[#891BE8]", "[#1AD698]"]
+        colorLine: ["#891BE8", "#1AD698"]
       },
       {
         type: "draggable",
@@ -233,7 +233,7 @@ export const tasks = [
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         src: require("@/assets/svg/card/card_5.svg"),
         alt: "card_5",
-        colorLine: ["[#0AAAF4]", "[#F8BD1C]"]
+        colorLine: ["#0AAAF4", "#F8BD1C"]
       },
     ]
   },

@@ -9,9 +9,9 @@
       leave-to-class="opacity-0"
     >
       <div
-        v-show="show"
+        v-show="show && columnIndex === clickColumn"
         ref="modal-backdrop"
-        class="fixed z-10 inset-0 overflow-y-auto bg-black bg-opacity-10"
+        class="fixed z-10 inset-0 overflow-y-auto bg-black bg-opacity-50"
       >
         <div
           class="flex items-center mx-4 my-auto h-screen md:items-start md:justify-center md:mx-auto md:min-h-screen md:pt-24 text-center"
@@ -80,6 +80,7 @@ import { useIndexStore } from "@/stores/index";
 
 interface Props {
   show?: boolean;
+  clickColumn: number;
   columnIndex: number;
 }
 defineProps<Props>();
@@ -103,12 +104,12 @@ const formList = [
 
 const form: TaskChild = reactive({
   type: "draggable",
-  id: indexStore.id,
+  id: "",
   data: "",
   description: "",
   src: "",
   alt: "",
-  colorLine: ["[#891BE8]", "[#1AD698]"],
+  colorLine: ["#891BE8", "#1AD698", "#ff3838"],
 });
 
 const formRules = {
@@ -128,7 +129,8 @@ const saveNote = (columnIndex: number, form: TaskChild) => {
   if (v$.value.data.$invalid || v$.value.description.$invalid) {
     v$.value.$touch();
   } else {
-    indexStore.addNote(columnIndex, form)
+    indexStore.addNote(columnIndex, Object.assign({}, form));
+    close();
   }
 };
 

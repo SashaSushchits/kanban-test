@@ -1,12 +1,13 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
 import { Tasks, TaskChild } from "../types/index.ts";
+import { uuid } from 'vue-uuid';
 
 export const useIndexStore = defineStore("indexStore", () => {
 
   const tasks = ref<Tasks>([]);
   // уникальный id для новых записей
-  const id = ref<String>("8");
+  const id = ref<String>('');
 
   const generateNotes = ( task: Tasks) => {
     for (let i = 0; i < task.length; i++) {
@@ -27,9 +28,10 @@ export const useIndexStore = defineStore("indexStore", () => {
   }
 
   const addNote = (columnIndex: number, note: TaskChild) => {
-    console.log('columnIndex', columnIndex)
-    console.log('note', note)
-    // tasks.value[columnIndex].children = tasks.value[columnIndex].children.push(note);
+    note.id = uuid.v1();
+    const result: TaskChild[] = [...tasks.value[columnIndex].children];
+    result.splice(result.length, 0, note);
+    tasks.value[columnIndex].children = result;
   }
 
   return {
