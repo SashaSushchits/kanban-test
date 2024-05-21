@@ -76,10 +76,10 @@
 <script setup lang="ts">
 import { Draggable } from "vue3-smooth-dnd";
 import { ref } from "vue";
-import LikeList from "../shared/LikeList.vue";
-import Comments from "../shared/Comments.vue";
-import { TaskChild } from "../../types/index.ts";
-import { useIndexStore } from "../../stores/index";
+import LikeList from "@/components/shared/LikeList.vue";
+import Comments from "@/components/shared/Comments.vue";
+import { TaskChild } from "@/types/index.ts";
+import { useIndexStore } from "@/stores/index";
 
 const indexStore = useIndexStore();
 

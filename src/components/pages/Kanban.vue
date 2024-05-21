@@ -76,11 +76,11 @@
 <script setup lang="ts">
 import { Container, Draggable } from "vue3-smooth-dnd";
 import { ref, toRaw } from "vue";
-import Card from "../entities/Card.vue";
-import AddCard from "../entities/AddCard.vue";
-import CreateNote from "../modals/CreateNote.vue";
-import { useIndexStore } from "../../stores/index";
-import { Tasks, Task, TaskChild, dropResult } from "../../types/index.ts";
+import Card from "@/components/entities/Card.vue";
+import AddCard from "@/components/entities/AddCard.vue";
+import CreateNote from "@/components/modals/CreateNote.vue";
+import { useIndexStore } from "@/stores/index";
+import { Tasks, Task, TaskChild, dropResult } from "@/types/index.ts";
 
 const indexStore = useIndexStore();
 

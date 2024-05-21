@@ -75,8 +75,8 @@
 import { reactive } from "vue";
 import { useVuelidate } from "@vuelidate/core";
 import { required } from "@vuelidate/validators";
-import { TaskChild } from "../../types/index.ts";
-import { useIndexStore } from "../../stores/index";
+import { TaskChild } from "@/types/index.ts";
+import { useIndexStore } from "@/stores/index";
 
 interface Props {
   show?: boolean;

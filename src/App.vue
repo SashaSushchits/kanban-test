@@ -4,12 +4,11 @@
 </template>
 
 <script setup lang="ts">
-import Header from "./components/nav/Header.vue";
-import Kanban from "./components/pages/Kanban.vue";
-// import Kanban from "./components/pages/KanbanJjj.vue";
+import Header from "@/components/nav/Header.vue";
+import Kanban from "@/components/pages/Kanban.vue";
 import { onMounted } from "vue"
-import { useIndexStore } from "./stores/index";
-import { tasks } from "./data/index"
+import { useIndexStore } from "@/stores/index";
+import { tasks } from "@/data/index"
 
 const indexStore = useIndexStore();
 

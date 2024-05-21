@@ -100,8 +100,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { Images } from "../../types/index.ts";
-import LikeList from "../shared/LikeList.vue";
+import { Images } from "@/types/index.ts";
+import LikeList from "@/components/shared/LikeList.vue";
 
 const images = ref<Images>([
   {
