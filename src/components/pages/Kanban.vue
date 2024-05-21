@@ -89,8 +89,7 @@ const indexStore = useIndexStore();
 const showModal = ref<boolean>(false);
 const isEdit = ref<boolean>(false);
 const itemId = ref<String>('');
-// 
-const clickColumn: number = (0);
+const clickColumn= ref<number>(0)
 
 const edit = (id: String) => {
   isEdit.value = !isEdit.value;
